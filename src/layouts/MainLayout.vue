@@ -32,6 +32,20 @@
         >
           Essential Links
         </q-item-label>
+        <q-item>
+          <router-link
+            :to="{name: 'auth'}"
+          >
+            AUTH redirects
+          </router-link>
+        </q-item>
+        <q-item>
+          <router-link
+            :to="{name: 'auth', query: {x: 2}}"
+          >
+            AUTH works
+          </router-link>
+        </q-item>
         <EssentialLink
           v-for="link in essentialLinks"
           :key="link.title"
